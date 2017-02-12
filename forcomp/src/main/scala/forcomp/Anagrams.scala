@@ -175,54 +175,53 @@ object Anagrams {
 
 
   def sentenceAnagrams(sentence: Sentence): List[Sentence] = {
-    val occurrences = Anagrams.sentenceOccurrences(sentence)
-    val combinations = Anagrams.combinations(occurrences)
-    val combinationsInDic = combinations map (a=>(a,(Anagrams.dictionaryByOccurrences get (a) getOrElse(Nil))))  filter (_._2 != Nil)
+    if (sentence.isEmpty)
+      List(Nil)
+    else
+    {
+      val occurrences = Anagrams.sentenceOccurrences(sentence)
+
+      val combinations = Anagrams.combinations(occurrences)
+      val combinationsInDic = combinations map (a => (a, (Anagrams.dictionaryByOccurrences get (a) getOrElse (Nil)))) filter (_._2 != Nil)
+
+      val reversedCombinations = for {
+        (k, v) <- combinationsInDic
+        w <- v
+      } yield (w, k)
 
 
-    val reversedCombinations = for {
-      (k, v) <- combinationsInDic
-      w <- v
-    } yield (w,k)
+      var occurenceCount = sumOccurence(sentenceOccurrences(sentence))
 
-    //    val reversedCombinations = for {
-//      (k, v) <- combinationsInDic
-//      w <- v
-//    } yield (w)
-
-
-    var occurenceCount = sumOccurence(sentenceOccurrences(sentence))
-
-    def isGoodAnagram(candidate: List[Word], target:Occurrences) : Boolean = {
-      //println("trying: " + candidate)
-      val candidateSentenceOccurence = Anagrams.sentenceOccurrences(candidate)
-     // if (sumOccurence (candidateSentenceOccurence)== occurenceCount)
-        Anagrams.subtract2(target,candidateSentenceOccurence).isEmpty
-      //else
-      //  false
-    }
+      def isGoodAnagram(candidate: List[Word], target: Occurrences): Boolean = {
+        //println("trying: " + candidate)
+        val candidateSentenceOccurence = Anagrams.sentenceOccurrences(candidate)
+        // if (sumOccurence (candidateSentenceOccurence)== occurenceCount)
+        Anagrams.subtract2(target, candidateSentenceOccurence).isEmpty
+        //else
+        //  false
+      }
 
 
+      val candidateLength = sentence.map(_.length).sum
+      println("L=" + candidateLength)
+      //    (for{
+      //      ix<- 1 to reversedCombinations.length
+      //      possibleAnagram <- reversedCombinations combinations ix
+      //      //if isGoodAnagram(possibleAnagram, occurrences)
+      //      if (possibleAnagram.map(_.length).sum) == candidateLength && (subtract2(possibleAnagram, occurrences).isEmpty)
+      //    }yield possibleAnagram) toList
 
-    val candidateLength = sentence.map(_.length).sum
-    println("L=" + candidateLength)
-//    (for{
-//      ix<- 1 to reversedCombinations.length
-//      possibleAnagram <- reversedCombinations combinations ix
-//      //if isGoodAnagram(possibleAnagram, occurrences)
-//      if (possibleAnagram.map(_.length).sum) == candidateLength && (subtract2(possibleAnagram, occurrences).isEmpty)
-//    }yield possibleAnagram) toList
+      val maxCombinations = reversedCombinations.map(_._1.length).sorted.foldLeft((0, 0))((a, c) => if (a._2 + c > candidateLength) a else (a._1 + 1, a._2 + c))._1
+      println("M=" + maxCombinations)
 
-    val maxCombinations = reversedCombinations.map(_._1.length).sorted.foldLeft((0,0))((a,c)=>if(a._2 + c > candidateLength) a else (a._1 +1, a._2 + c))._1
-    println("M=" + maxCombinations)
+      def isGood(possibleAnagram: List[(Word, Occurrences)]) = true
 
-    def isGood(possibleAnagram: List[(Word, Occurrences)]) = true
-
-    (for{
-      ix<- 1 to maxCombinations
-      possibleAnagram <- reversedCombinations combinations ix
-      if isGoodAnagram((possibleAnagram.map(_._1)), occurrences)
+      (for {
+        ix <- 1 to maxCombinations
+        possibleAnagram <- reversedCombinations combinations ix
+        if isGoodAnagram((possibleAnagram.map(_._1)), occurrences)
       //if (possibleAnagram.map(_._1.length).sum) == candidateLength && isGood(possibleAnagram) //&& (subtract2(possibleAnagram, occurrences).isEmpty)
-    }yield possibleAnagram.map(_._1).permutations.flatten.toList) toList
+      } yield possibleAnagram.map(_._1).permutations) flatMap (_.toList) toList
+    }
   }
 }

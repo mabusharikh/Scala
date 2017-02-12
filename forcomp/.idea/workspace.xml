@@ -46,8 +46,8 @@
       <file leaf-file-name="Anagrams.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/forcomp/Anagrams.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="803">
-              <caret line="226" column="3" lean-forward="true" selection-start-line="226" selection-start-column="3" selection-end-line="226" selection-end-column="3" />
+            <state relative-caret-position="594">
+              <caret line="191" column="0" lean-forward="true" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -734,9 +734,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AnagramsSuite - 2017.02.07 at 23h 21m 26s.xml">
-      <configuration name="AnagramsSuite" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
     <history-entry file="AnagramsSuite - 2017.02.07 at 23h 24m 05s.xml">
       <configuration name="AnagramsSuite" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
@@ -747,6 +744,9 @@
       <configuration name="AnagramsSuite" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
     <history-entry file="AnagramsSuite - 2017.02.09 at 23h 49m 52s.xml">
+      <configuration name="AnagramsSuite" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="AnagramsSuite - 2017.02.12 at 22h 09m 21s.xml">
       <configuration name="AnagramsSuite" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
     <history-entry file="AnagramsSuite_sentence_anagrams__Linux_rulez - 2017.02.07 at 23h 21m 58s.xml">
@@ -824,7 +824,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="scala-line">
           <url>file://$PROJECT_DIR$/src/main/scala/forcomp/Anagrams.scala</url>
-          <line>207</line>
+          <line>205</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
@@ -982,8 +982,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/forcomp/Anagrams.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="803">
-          <caret line="226" column="3" lean-forward="true" selection-start-line="226" selection-start-column="3" selection-end-line="226" selection-end-column="3" />
+        <state relative-caret-position="594">
+          <caret line="191" column="0" lean-forward="true" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
           <folding />
         </state>
       </provider>
