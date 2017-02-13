@@ -123,12 +123,15 @@ object Anagrams {
       (mappedY.foldLeft(mappedX) ((a,p)=>a+((p._1, a(p._1) - p._2 ))))  filter (x=>x._2 > 0) toList
   }
 
-  def subtract2(x:Occurrences, y:Occurrences) : Occurrences= {
-  val mappedY = y toMap
-    val mappedX = x toMap
+  def subtractWithNoFilter(mappedX:Map[Char, Int], y:Occurrences) : Map[Char, Int]= {
+    val mappedY = y toMap
 
-  (mappedY.foldLeft(mappedX) ((a,p)=> a+((p._1, a(p._1) - p._2 ))))  filter (x=>x._2 != 0) toList
+  (mappedY.foldLeft(mappedX) ((a,p)=> a+((p._1, a(p._1) - p._2 ))))
 }
+
+  def isGoodAnagram(x:List[Occurrences], y:Occurrences) : Boolean = {
+    (x.foldLeft(y toMap)((a, p) => subtractWithNoFilter(a, p))) forall (_._2 == 0)
+  }
 
   /** Returns a list of all anagram sentences of the given sentence.
    *
@@ -171,8 +174,6 @@ object Anagrams {
    *  Note: There is only one anagram of an empty sentence.
    */
 
-  def sumOccurence(occurrences: Occurrences):Int = occurrences.foldLeft(0) (_+ _._2)
-
 
   def sentenceAnagrams(sentence: Sentence): List[Sentence] = {
     if (sentence.isEmpty)
@@ -190,32 +191,13 @@ object Anagrams {
       } yield (w, k)
 
 
-      var occurenceCount = sumOccurence(sentenceOccurrences(sentence))
-
-      def isGoodAnagram2(candidate: List[Word], target: Occurrences): Boolean = {
-        val candidateSentenceOccurence = Anagrams.sentenceOccurrences(candidate)
-         if (sumOccurence (candidateSentenceOccurence)== occurenceCount)
-          Anagrams.subtract2(target, candidateSentenceOccurence).isEmpty
-        else
-          false
-      }
-
-      def isGoodAnagram(candidate: List[Word], target: Occurrences): Boolean = {
-        val candidateSentenceOccurence = Anagrams.sentenceOccurrences(candidate)
-        //if (sumOccurence (candidateSentenceOccurence)== occurenceCount)
-          Anagrams.subtract2(target, candidateSentenceOccurence).isEmpty
-        //else
-        //  false
-      }
-
       val candidateLength = sentence.map(_.length).sum
       val maxCombinations = reversedCombinations.map(_._1.length).sorted.foldLeft((0, 0))((a, c) => if (a._2 + c > candidateLength) a else (a._1 + 1, a._2 + c))._1
 
       (for {
         ix <- 1 to maxCombinations
         possibleAnagram <- reversedCombinations combinations ix
-        if ((possibleAnagram.map(_._1.length).sum) == candidateLength && isGoodAnagram((possibleAnagram.map(_._1)), occurrences))
-        //if (possibleAnagram.map(_._1.length).sum) == candidateLength && isGood(possibleAnagram) //&& (subtract2(possibleAnagram, occurrences).isEmpty)
+        if ((possibleAnagram.map(_._1.length).sum) == candidateLength && isGoodAnagram((possibleAnagram.map(_._2)), occurrences))
       } yield possibleAnagram.map(_._1).permutations) flatMap (_.toList) toList
     }
   }

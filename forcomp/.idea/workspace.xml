@@ -26,8 +26,8 @@
       <file leaf-file-name="AnagramsSuite.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/forcomp/AnagramsSuite.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="71" column="2" lean-forward="false" selection-start-line="71" selection-start-column="2" selection-end-line="71" selection-end-column="2" />
+            <state relative-caret-position="1186">
+              <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -43,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Anagrams.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Anagrams.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/forcomp/Anagrams.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="217" column="112" lean-forward="false" selection-start-line="217" selection-start-column="112" selection-end-line="217" selection-end-column="112" />
+            <state relative-caret-position="660">
+              <caret line="177" column="2" lean-forward="true" selection-start-line="177" selection-start-column="2" selection-end-line="177" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -66,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scratch.sc" pinned="false" current-in-tab="false">
+      <file leaf-file-name="scratch.sc" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/forcomp/scratch.sc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-30">
-              <caret line="123" column="31" lean-forward="false" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
+            <state relative-caret-position="33">
+              <caret line="112" column="18" lean-forward="true" selection-start-line="112" selection-start-column="18" selection-end-line="112" selection-end-column="18" />
               <folding>
                 <marker date="1486684032483" expanded="true" signature="2030:2228" ph="..." />
               </folding>
@@ -338,7 +338,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="ScalaTest.AnagramsSuite">
     <configuration default="false" name="AnagramsSuite" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="root" />
@@ -673,8 +673,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="ScalaTest.AnagramsSuite" />
+        <item index="0" class="java.lang.String" itemvalue="ScalaTest.AnagramsSuite" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
         <item index="2" class="java.lang.String" itemvalue="ScalaTest.AnagramsSuite.subtract: lard - r" />
         <item index="3" class="java.lang.String" itemvalue="ScalaTest.AnagramsSuite.sentence anagrams: Linux rulez" />
       </list>
@@ -749,11 +749,11 @@
     <history-entry file="AnagramsSuite - 2017.02.12 at 22h 09m 21s.xml">
       <configuration name="AnagramsSuite" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="AnagramsSuite_sentence_anagrams__Linux_rulez - 2017.02.07 at 23h 21m 58s.xml">
-      <configuration name="AnagramsSuite.sentence anagrams: Linux rulez" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="AnagramsSuite - 2017.02.12 at 22h 23m 49s.xml">
+      <configuration name="AnagramsSuite" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="AnagramsSuite_sentence_anagrams__Linux_rulez - 2017.02.07 at 23h 23m 41s.xml">
-      <configuration name="AnagramsSuite.sentence anagrams: Linux rulez" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="AnagramsSuite - 2017.02.12 at 22h 39m 31s.xml">
+      <configuration name="AnagramsSuite" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
     <history-entry file="AnagramsSuite_subtract__lard_-_r - 2017.02.07 at 23h 31m 08s.xml">
       <configuration name="AnagramsSuite.subtract: lard - r" configurationId="ScalaTestRunConfiguration" />
@@ -776,7 +776,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="0" width="3200" height="1731" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -796,9 +796,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32700136" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32700136" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32971507" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25307843" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -948,24 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/forcomp/scratch.sc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30">
-          <caret line="123" column="31" lean-forward="false" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
-          <folding>
-            <marker date="1486684032483" expanded="true" signature="2030:2228" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/forcomp/AnagramsSuite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="71" column="2" lean-forward="false" selection-start-line="71" selection-start-column="2" selection-end-line="71" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/forcomp/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
@@ -976,9 +958,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/forcomp/Anagrams.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="217" column="112" lean-forward="false" selection-start-line="217" selection-start-column="112" selection-end-line="217" selection-end-column="112" />
+        <state relative-caret-position="660">
+          <caret line="177" column="2" lean-forward="true" selection-start-line="177" selection-start-column="2" selection-end-line="177" selection-end-column="2" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/forcomp/AnagramsSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1186">
+          <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/forcomp/scratch.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="112" column="18" lean-forward="true" selection-start-line="112" selection-start-column="18" selection-end-line="112" selection-end-column="18" />
+          <folding>
+            <marker date="1486684032483" expanded="true" signature="2030:2228" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
