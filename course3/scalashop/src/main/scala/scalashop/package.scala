@@ -54,13 +54,21 @@ package object scalashop {
     val maxY = clamp(y + radius, 0, src.height -1)
 
         var counter =0
-        var sum =0
+    var sumRed =0
+    var sumBlue =0
+    var sumGreen =0
+    var sumAlpha =0
+
     var yy = minY
 
     while(yy <= maxY){
       var xx = minX
       while(xx <= maxX) {
-        sum += src(xx, yy)
+        val pixel = src(xx, yy)
+        sumRed += red(pixel)
+        sumGreen += green(pixel)
+        sumBlue += blue(pixel)
+        sumAlpha += alpha(pixel)
         counter += 1
         xx += 1
       }
@@ -71,7 +79,7 @@ package object scalashop {
 //      counter += 1
 //    }
 
-    sum/counter
+    rgba(sumRed/counter, sumGreen/counter, sumBlue/counter, sumAlpha/counter)
   }
 
 }

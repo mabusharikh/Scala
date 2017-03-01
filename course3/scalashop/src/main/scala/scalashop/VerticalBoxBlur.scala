@@ -55,9 +55,9 @@ object VerticalBoxBlur {
    *  columns.
    */
   def parBlur(src: Img, dst: Img, numTasks: Int, radius: Int): Unit = {
-   val numOfCols = src.width/numTasks
-    val allTasks = (0 until src.width).sliding(numOfCols).map(x=>task{
-      blur(src, dst, x(0),x(1),radius)
+   val numOfCols = if(numTasks < src.width) src.width/numTasks else 1
+    val allTasks = (0 until src.width).sliding(numOfCols,numOfCols).map(x=>task{
+      blur(src, dst, x(0),x.last+1,radius)
     })
 
     allTasks.foreach(t=>t.join())

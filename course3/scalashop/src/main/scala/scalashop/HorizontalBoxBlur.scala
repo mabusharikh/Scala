@@ -54,9 +54,9 @@ object HorizontalBoxBlur {
    *  rows.
    */
   def parBlur(src: Img, dst: Img, numTasks: Int, radius: Int): Unit = {
-    val numOfRows = src.height /numTasks
-    val allTasks = (0 until src.height).sliding(numOfRows).map(x=>task{
-      blur(src, dst, x(0),x(1),radius)
+    val numOfRows = if (numTasks < src.height) src.height/numTasks else 1
+    val allTasks = (0 until src.height).sliding(numOfRows,numOfRows).map(x=>task{
+      blur(src, dst, x(0),x.last+1,radius)
     })
 
     allTasks.foreach(t=>t.join())
