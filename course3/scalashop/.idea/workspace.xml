@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6393b32-2acc-44f8-8127-ea9eb24e35a8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/scalashop/HorizontalBoxBlur.scala" afterPath="$PROJECT_DIR$/src/main/scala/scalashop/HorizontalBoxBlur.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/scalashop/VerticalBoxBlur.scala" afterPath="$PROJECT_DIR$/src/main/scala/scalashop/VerticalBoxBlur.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/scalashop/package.scala" afterPath="$PROJECT_DIR$/src/main/scala/scalashop/package.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/scalashop/BlurSuite.scala" afterPath="$PROJECT_DIR$/src/test/scala/scalashop/BlurSuite.scala" />
-    </list>
+    <list default="true" id="d6393b32-2acc-44f8-8127-ea9eb24e35a8" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
     <ignored path="$PROJECT_DIR$/project/target/" />
@@ -158,9 +152,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
+    <option name="x" value="-10" />
     <option name="width" value="3200" />
-    <option name="height" value="1731" />
+    <option name="height" value="1730" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -750,6 +744,14 @@
       <option name="presentableId" value="Default" />
       <updated>1488065337126</updated>
     </task>
+    <task id="LOCAL-00001" summary="submitted assignment">
+      <created>1488410314538</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1488410314539</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -785,7 +787,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="0" width="3200" height="1731" extended-state="0" />
+    <frame x="-10" y="0" width="3200" height="1730" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -808,7 +810,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971507" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32971507" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299389" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24983798" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -823,6 +825,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="submitted assignment" />
+    <option name="LAST_COMMIT_MESSAGE" value="submitted assignment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
