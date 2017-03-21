@@ -1,5 +1,7 @@
 package kmeans
 
+import com.sun.org.apache.bcel.internal.generic.NEW
+
 import scala.annotation.tailrec
 import scala.collection._
 import scala.util.Random
@@ -43,8 +45,11 @@ class KMeans {
   }
 
   def classify(points: GenSeq[Point], means: GenSeq[Point]): GenMap[Point, GenSeq[Point]] = {
-    ???
+    var classified = points.groupBy(p=>findClosest(p, means))
+    means.foreach(m=>if(!classified.contains(m)) {classified = classified.updated(m,GenSeq())})
+    classified
   }
+
 
   def findAverage(oldMean: Point, points: GenSeq[Point]): Point = if (points.length == 0) oldMean else {
     var x = 0.0
@@ -58,17 +63,17 @@ class KMeans {
     new Point(x / points.length, y / points.length, z / points.length)
   }
 
-  def update(classified: GenMap[Point, GenSeq[Point]], oldMeans: GenSeq[Point]): GenSeq[Point] = {
-    ???
-  }
+  def update(classified: GenMap[Point, GenSeq[Point]], oldMeans: GenSeq[Point]): GenSeq[Point] = oldMeans.map(oldMean=>findAverage(oldMean, classified(oldMean)))
+
 
   def converged(eta: Double)(oldMeans: GenSeq[Point], newMeans: GenSeq[Point]): Boolean = {
-    ???
+      oldMeans.zip(newMeans).forall({case (x1,x2)=>x1.squareDistance(x2) <= eta})
   }
 
   @tailrec
   final def kMeans(points: GenSeq[Point], means: GenSeq[Point], eta: Double): GenSeq[Point] = {
-    if (???) kMeans(???, ???, ???) else ??? // your implementation need to be tail recursive
+    val newMeans = update(classify(points, means), means)
+    if (!converged(eta)(newMeans, means)) kMeans(points, newMeans, eta) else newMeans // your implementation need to be tail recursive
   }
 }
 
